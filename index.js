@@ -3,7 +3,7 @@ const xml2js = require('xml2js')
 const util=require('util')
 const express = require ('express')
 const app=express()
-const PORT=5000
+const PORT=5050
 const parser= new xml2js.Parser();
 const cors= require('cors')
 
@@ -17,6 +17,6 @@ app.get('/',(req,res)=>{
     })
 })
 
-app.listen(process.env.PORT || 5000,()=>{
+app.listen(PORT,()=>{
     console.log(`app listening on port ${PORT}`)
 })
